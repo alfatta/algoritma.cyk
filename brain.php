@@ -89,9 +89,9 @@
 			for ($i=1; $i <= count($string)-$j+1; $i++) { 
 				for ($k=1; $k <= $j-1; $k++) { 
 					if ($k==1) {
-						$cyk[$j][$i] = cariArray(array_union($cyk[$k][$i], $cyk[$j-$k][$i+$k]),$cnf);
+						$cyk[$j][$i] = array_unique(cariArray(array_union($cyk[$k][$i], $cyk[$j-$k][$i+$k]),$cnf));
 					}else{
-						$cyk[$j][$i] = array_merge($cyk[$j][$i],cariArray(array_union($cyk[$k][$i], $cyk[$j-$k][$i+$k]),$cnf));
+						$cyk[$j][$i] = array_unique(array_merge($cyk[$j][$i],cariArray(array_union($cyk[$k][$i], $cyk[$j-$k][$i+$k]),$cnf)));
 					}
 				}
 			}
@@ -114,12 +114,12 @@
 		$result = "
 		<table>
 			<tr>
-				<th width='70px'></th>
-				<th width='70px'>1</th>
-				<th width='70px'>2</th>
-				<th width='70px'>3</th>
-				<th width='70px'>4</th>
-				<th width='70px'>5</th>
+				<th width='100px'></th>
+				<th width='100px'>1</th>
+				<th width='100px'>2</th>
+				<th width='100px'>3</th>
+				<th width='100px'>4</th>
+				<th width='100px'>5</th>
 			</tr>";
 		for ($i=1; $i <= count($cyk); $i++) { 
 			$result .= "
@@ -163,7 +163,7 @@
 					echo "<br>";
 				}
 				if ($j > 2) {
-					$total = implode(", ", $tot);
+					$total = implode(", ", array_unique($tot));
 					if ($total == "") {
 						$total = "&empty;";
 					}
