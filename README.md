@@ -12,4 +12,5 @@ git clone https://github.com/alfatta/algoritma.cyk.git
 
 ## Version
 * 1.0.0
-** First step project
+
+First step project
