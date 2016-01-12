@@ -9,3 +9,7 @@ https://github.com/alfatta/algoritma.cyk/archive/master.zip
 
 git clone https://github.com/alfatta/algoritma.cyk.git
 * Open dengan webserver php
+
+## Version
+* 1.0.0
+** First step project
