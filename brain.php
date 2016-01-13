@@ -51,7 +51,7 @@
 	{
 		$result = array();
 		for ($i=0; $i < count($data); $i++) { 
-			for ($j=1; $j < 5; $j++) { 
+			for ($j=1; $j < count($data[$i]); $j++) { 
 				if ($cari == $data[$i][$j]) {
 					array_push($result, $data[$i][0]);
 				}
